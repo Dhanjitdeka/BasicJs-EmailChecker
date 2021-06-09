@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3>Email Address Verification</h3>
+        <form action="#" id="form">
+           <div class="inputBox">
+               <input type="text" name="" id="email" placeholder="Enter email address" onkeydown="validation()">
+               <span id="text"></span>
+           </div> 
+        </form>
+    </div>
+    <script type="text/javascript">
+        function validation(){
+            const form = document.querySelector('#form');
+            let email = document.querySelector('#email').value;
+            const text = document.querySelector('#text');
+            let pat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if(email.match(pat)){
+               form.classList.add('valid');
+               form.classList.remove('invalid');
+               text.innerHTML = "Your email address is valid";
+               text.style.color = "blue";
+            }else{
+                form.classList.remove('valid');
+                form.classList.add('invalid');
+                text.innerHTML = "Your email address is invalid";
+                text.style.color = "red";
+            }
+            if(email === ""){
+                form.classList.remove('valid');
+                form.classList.remove('valid');
+                text.innerHTML = "";
+                text.style.color = "green";
+            }
+        }   
+    </script>
+</body>
+</html>

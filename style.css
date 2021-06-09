@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ffc8dd;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h3 {
+  position: relative;
+  font-size: 20px;
+  color: #161a1d;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#form {
+  position: relative;
+}
+
+#form #email {
+  width: 250px;
+  padding: 10px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #161a1d;
+  outline: none;
+}
+
+#text {
+  display: block;
+  font-weight: 300;
+  padding: 10px;
+}
